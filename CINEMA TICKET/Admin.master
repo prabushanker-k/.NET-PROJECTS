@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="loginDisplay">
+                <br />
+                <asp:Image ID="Image1" runat="server" 
+                    
+                    style="position: absolute; top: 4px; left: 5px; width: 949px; z-index: 1; height: 238px; bottom: 42px;" 
+                    ImageUrl="~/Images/kratos_eyes-wide.jpg" />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/adminhome.aspx" Text="Home" Value="Home"/>
+                        <asp:MenuItem NavigateUrl="~/MovieSetup.aspx" Text="Movie Setup" 
+                            Value="Movie Setup"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ScrShot.aspx" Text="ScrShot" Value="ScrShot">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/RegTable.aspx" Text="RegTable" Value="RegTable">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ScreenTable.aspx" Text="Screen Table" 
+                            Value="Screen Table"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/PayTable.aspx" Text="Pay Table" Value="Pay Table">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Confirmation.aspx" Text="Confirmation" 
+                            Value="Confirmation"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Logout" Value="Logout">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
